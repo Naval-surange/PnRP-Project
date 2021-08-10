@@ -77,8 +77,9 @@ axins1.set_yticks([])
 mark_inset(ax1, axins1, loc1=1, loc2=4, fc="none", ec="0.5")
 
 
-ax1.set_xlabel("Date")
-ax1.set_ylabel("Price in USD")
+ax1.set_xlabel("Date",fontsize=30)
+ax1.set_ylabel("Price in USD",fontsize=30)
+
 
 plt.savefig("fig1.png",dpi=500)
 plt.show()
@@ -107,8 +108,8 @@ axins1.set_yticks([])
 mark_inset(ax1, axins1, loc1=1, loc2=4, fc="none", ec="0.5")
 
 
-ax1.set_xlabel("Date")
-ax1.set_ylabel("Price in USD")
+ax1.set_xlabel("Date",fontsize=30)
+ax1.set_ylabel("Price in USD",fontsize=30)
 
 plt.savefig("fig2.png",dpi=500)
 plt.show()
@@ -121,8 +122,8 @@ plt.figure(figsize=(20,7))
 plt.plot(df["Volume"],label="Volume of Amazon Stock",linewidth=1)
 yhat = savgol_filter(df["Volume"], 25, 3)
 plt.plot(df["Date"],yhat,linewidth=4,label="Smoothened Curve")
-plt.xlabel("Date")
-plt.ylabel("Volume of stock in flow")
+plt.xlabel("Date",fontsize=20)
+plt.ylabel("Volume of stock in flow",fontsize=20)
 plt.legend()
 plt.savefig("fig3.png",dpi=500)
 plt.show()
